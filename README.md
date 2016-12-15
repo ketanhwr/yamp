@@ -11,9 +11,9 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/ketanhwr/yamp
+git clone https://github.com/ketanhwr/yamp.git
 # Go into the repository
-cd electron-quick-start
+cd yamp
 # Install dependencies
 npm install
 # Run the app
@@ -25,3 +25,5 @@ Modify `public/config.json` to point towards the directory/directories in which 
 _Note: I'm working on Node.js version 4.7.0_
 
 _Another Note: There is a bug in `jsmediatags` library due to which album arts of bigger than normal size fail to load. So don't blame me._
+
+_Final Note: Please do not judge me on the basis of design and bugs. I made this in a span of 2-3 hours._
