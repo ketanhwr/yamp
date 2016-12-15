@@ -1,2 +1,3 @@
-# yamp
-Yet Another Music Player!
+# YAMP
+
+Branch for new version. Get ready :metal:
