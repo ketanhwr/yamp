@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>YAMP</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script>window.$ = window.jQuery = require('./js/jquery-3.1.1.min.js');</script>
+    <script src="js/controls.js"></script>
+
+  </head>
+  
+  <body>
+    
+    <img class="background" src="img/album_art.jpg">
+
+    <div class="songbox" id="main">
+
+      <h2 id="title">Title</h2>
+      <h2 id="artist">Artist</h2>
+      <h2 id="album">Album</h2>
+
+      <img class="album-art" src="img/album_art.jpg">
+      <br/>
+
+      <audio controls hidden=true>
+        <source>
+      </audio>
+
+      <img class="controls" src="img/play.png" onclick="playpause()">
+
+    </div>
+
+  </body>
+
+  <script>
+    require('./js/script.js')
+  </script>
+
+</html>

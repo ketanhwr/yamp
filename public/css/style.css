@@ -1,0 +1,78 @@
+@font-face {
+	font-family: HelvetiHand;
+	src: url('../font/HelvetiHand.ttf');
+}
+
+@font-face {
+	font-family: Dudu_Calligraphy;
+	src: url('../font/Dudu_Calligraphy.ttf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: black;
+}
+
+.background {
+    height:600px;
+    width:600px;
+    text-align:center;
+    -webkit-filter: blur(13px);
+    -moz-filter: blur(13px);
+    -o-filter: blur(13px);
+    -ms-filter: blur(13px);
+    filter: blur(13px);
+    position: absolute;
+    left:0;
+    top: 0;
+}
+
+.controls {
+	widows: 75px;
+	height: 75px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.album-art {
+	text-align: center;
+	height: 250px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 30px white
+}
+
+h2 {
+	font-size: 38px;
+	font-family: Dudu_Calligraphy;
+	color: black;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-shadow: 2px 2px 8px white;
+}
+
+#title {
+	marign-top: 15px;
+}
+
+.songbox {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+.songbutton {
+	width: 100%;
+	text-align: center;
+}
+
+button {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
