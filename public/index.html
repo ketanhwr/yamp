@@ -10,14 +10,16 @@
 
   <body>
 
-    <p>yamp</p>
+    <p id = "main-title">yamp</p>
+
+    <img src = "img/close.png" id = "close-button">
 
     <script>
       (function () {
         const { BrowserWindow } = require('electron').remote
 
         function init() {
-          document.getElementsByTagName("p")[0].addEventListener("click", (e) => {
+          document.getElementById("close-button").addEventListener("click", (e) => {
             var window = BrowserWindow.getFocusedWindow()
             window.close()
           });
