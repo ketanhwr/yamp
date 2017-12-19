@@ -1,0 +1,11 @@
+body {
+  text-align: center;
+  background-image: url('../img/earphones.jpg');
+  background-size: cover;
+}
+
+p {
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 72px;
+  color: white;
+}
