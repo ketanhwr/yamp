@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="UTF-8">
     <title>Hello World!</title>
 
     <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
     <link rel = "stylesheet" type = "text/css" href = "css/style.css">
+
+    <script src="js/soundmanager2.js"></script>
+
   </head>
 
   <body>
@@ -16,27 +20,61 @@
     <img src = "img/close.png" id = "close-button" class = "control-button">
 
     <script>
-      (function () {
-        const { BrowserWindow } = require('electron').remote
+      const { BrowserWindow } = require('electron').remote
 
-        function init() {
-          document.getElementById('close-button').addEventListener('click', (e) => {
-            var window = BrowserWindow.getFocusedWindow()
-            window.close()
-          })
+      function init() {
 
-          document.getElementById('minimize-button').addEventListener('click', (e) => {
-            var window = BrowserWindow.getFocusedWindow()
-            window.minimize()
-          })
-        }
+        document.getElementById('close-button').addEventListener('click', (e) => {
+          var window = BrowserWindow.getFocusedWindow()
+          window.close()
+        })
 
-        document.onreadystatechange = () => {
-          if (document.readyState == 'complete') {
-            init()
+        document.getElementById('minimize-button').addEventListener('click', (e) => {
+          var window = BrowserWindow.getFocusedWindow()
+          window.minimize()
+        })
+
+        soundManager.setup({
+          url: 'swf/',
+
+          useFastPolling: true,
+
+          useHighPerformance: true,
+
+          onready: function() {
+            var mySound = soundManager.createSound({
+              id: 'aSound',
+
+              url: 'http://freshly-ground.com/data/audio/mpc/20090119%20-%20Untitled%20Groove.mp3',
+
+              whileloading: function() {
+                console.log(mySound.durationEstimate)
+              },
+
+              whileplaying: function() {
+                console.log(mySound.position)
+              },
+
+              onload: function() {
+                console.log(mySound.duration)
+              },
+            })
+
+            mySound.play()
+          },
+
+          ontimeout: function() {
+            console.log('Sound Manager 2 could not get setup')
           }
-        };
-      })();
+        })
+      }
+
+      document.onreadystatechange = () => {
+        if (document.readyState == 'complete') {
+          init()
+        }
+      }
+
     </script>
 
   </body>
